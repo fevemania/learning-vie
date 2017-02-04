@@ -15,12 +15,34 @@ https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.css">
 	<div id="root" class="container">
 		<!-- <task-list></task-list> -->
 		<!-- <message title="Hello World" body="Lorem ipsum dolor sit amet."> -->
-		<modal v-show="showModal" @close="showModal = false">
+
+		<!-- <modal v-show="showModal" @close="showModal = false">
 			<p>
 			  	Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam.
 		  	</p>
 		</modal>
-		<button @click="showModal = true">show modal</button>
+		<button @click="showModal = true">show modal</button> -->
+
+		<!-- <ul id="tabs">
+			<li><a href="#">About</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">About Our Culture</a></li>
+		</ul> -->
+
+		<!-- <div class="tab-panels"></div> -->
+		<tabs>
+			<tab name="About Us" :selected="true">
+				<h1>Here is the content for the about us tab. </h1>
+			</tab>
+
+			<tab name="About Our Culture">
+				<h1>Here is the content for the about culture tab. </h1>
+			</tab>
+
+			<tab name="About Our Vision">
+				<h1>Here is the content for the about vision tab. </h1>
+			</tab>
+		</tabs>
 	</div>
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>

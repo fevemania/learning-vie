@@ -13,6 +13,20 @@
 	
 	<input id="input" type="text" v-model="newName" >
 	<button @click="addName">Add name</button>
+
+	<h1>
+		{{ reversedMessage }}
+	</h1>
+
+	<h2>All Tasks</h2>
+	<ul>
+		<li v-for="task in tasks" v-text="task.description"></li>
+	</ul>
+
+	<h2>Incomplete Tasks</h2>
+	<ul>
+		<li v-for="task in incompleteTasks" v-text="task.description"></li>
+	</ul>
 </div>
 
 
@@ -24,7 +38,16 @@
 		el: '#root',
 		data: {
 			newName: '',
-			names: ['Joe', 'Mary', 'Jane', 'Jack']
+			names: ['Joe', 'Mary', 'Jane', 'Jack'],
+			message: 'Hello World',
+			tasks: [
+				{ description: 'Go to the store', completed: true },
+				{ description: 'Finish screencast', completed: false },
+				{ description: 'Make donation', completed: false },
+				{ description: 'Clear inbox', completed: false },
+				{ description: 'Make dinner', completed: false },
+				{ description: 'Clean room', completed: true },
+			]
 		},
 
 		methods: {
@@ -33,6 +56,19 @@
 				this.newName = '';
 			}
 		},
+
+		computed: {
+			reversedMessage() {
+				return this.message.split('').reverse().join('');
+			},
+			incompleteTasks() {
+				return this.tasks.filter(task => ! task.completed); // 2015 syntax
+
+				// this.tasks.filter(function (task) {		// tradictional
+				// 	return ! task.completed;
+				// })
+			}
+		}
 	});
 
 	

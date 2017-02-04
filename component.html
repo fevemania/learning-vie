@@ -14,8 +14,13 @@ https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.css">
 
 	<div id="root" class="container">
 		<!-- <task-list></task-list> -->
-		<message title="Hello World" body="Lorem ipsum dolor sit amet.">
-		
+		<!-- <message title="Hello World" body="Lorem ipsum dolor sit amet."> -->
+		<modal v-show="showModal" @close="showModal = false">
+			<p>
+			  	Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam.
+		  	</p>
+		</modal>
+		<button @click="showModal = true">show modal</button>
 	</div>
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>

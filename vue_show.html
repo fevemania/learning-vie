@@ -1,0 +1,56 @@
+<!-- 對表單的內容作同步驗證之練習 -->
+<!-- 學習來源: Laracast <<Learning Vue 1.0: Step By Step: Vue Show
+>> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	
+</head>
+<body>
+	<div id="root">
+		<!-- <form>
+			<span class="error" v-show="!message">
+				You must enter a message
+			</span>
+
+			<textarea v-model="message"></textarea>
+
+			<button type="submit" v-show="message">
+				Send Messages
+			</button>
+		</form> -->
+
+		<div class="register-bd">
+			<form action="#">
+				<ul>
+					<li>
+						<input type="text" name="name" v-model="createUser.nickname">
+					</li>
+					<li v-if="createUser.nickname">
+						<i class="fa fa-info-circle"></i>all is well
+					</li>
+				</ul>
+			</form>	
+		</div>
+		
+			
+		</form>
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+	<script>
+		new Vue({
+			el: '#root',
+			data: {
+				message: '',
+				createUser: {
+					nickname: 'I am',
+
+				}
+			}
+		});
+	</script>
+</body>
+</html>

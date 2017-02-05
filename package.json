@@ -1,0 +1,23 @@
+{
+  "name": "learning_vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "vee-validate": "^2.0.0-beta.22"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fevemania/learning-vue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fevemania/learning-vue/issues"
+  },
+  "homepage": "https://github.com/fevemania/learning-vue#readme"
+}

@@ -2,13 +2,15 @@
   "name": "learning_vue",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "main_copy.js",
   "dependencies": {
     "vee-validate": "^2.0.0-beta.22"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",

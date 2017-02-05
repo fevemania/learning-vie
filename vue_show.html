@@ -6,51 +6,13 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-	<div id="root">
-		<!-- <form>
-			<span class="error" v-show="!message">
-				You must enter a message
-			</span>
-
-			<textarea v-model="message"></textarea>
-
-			<button type="submit" v-show="message">
-				Send Messages
-			</button>
-		</form> -->
-
-		<div class="register-bd">
-			<form action="#">
-				<ul>
-					<li>
-						<input type="text" name="name" v-model="createUser.nickname">
-					</li>
-					<li v-if="createUser.nickname">
-						<i class="fa fa-info-circle"></i>all is well
-					</li>
-				</ul>
-			</form>	
-		</div>
+	<div id="app">
 		
-			
-		</form>
-	</div>
+	</div>	
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
-
-	<script>
-		new Vue({
-			el: '#root',
-			data: {
-				message: '',
-				createUser: {
-					nickname: 'I am',
-
-				}
-			}
-		});
-	</script>
+	<script src="dist/main_copy.js"></script>
 </body>
 </html>

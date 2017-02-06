@@ -1,3 +1,4 @@
+// Lesson: Components 101
 Vue.component('task-list', {
 	template: `
 		<div>
@@ -18,7 +19,7 @@ Vue.component('task-list', {
 });
 
 Vue.component('task', {
-		template: '<li><slot></slot></li>',
+	template: '<li><slot></slot></li>',
 });
 
 Vue.component('message', {

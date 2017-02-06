@@ -1,4 +1,4 @@
-<!-- Can only use between parent and child -->
+<!-- Not only use between parent and child, but also child to child -->
 
 <!DOCTYPE html>
 <html>
@@ -12,12 +12,13 @@
 
 <div id="root" class="container">
 	<!-- v-on:applied="trigger" -->
-	<coupon @applied="onCouponApplied"></coupon>
+	<coupon></coupon>
+	<h1 v-if="couponApplied">You used a coupon!</h1>
 </div>
 
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="compo_communication.js"></script>
+<script src="compo_2_other_version.js"></script>
 
 
 </body>
